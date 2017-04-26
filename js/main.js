@@ -17212,12 +17212,6 @@ if($('div[data-vc-stretch-content="true"]').length > 0 && $('div[data-vc-full-wi
 							}
 							if($(this).find(".rollover-click-target.go-to").length > 0){
 								window.location.href = $(this).find(".rollover-click-target.go-to").attr('href');
-							}else if($(this).hasClass("woocom-project")){
-								if ( $(e.target).is(".add_to_cart_button") ) {
-									return true
-								}else{
-									window.location.href = $(this).find(" > a").attr('href');
-								}
 							}
 						} else {
 
@@ -18599,12 +18593,12 @@ $window.trigger("dt.removeLoading");
 	};
 
 	// Prevent a backgroung rendering glitch in Webkit.
-	// if (!window.bgGlitchFixed && $.browser.webkit) {
-	// 	setTimeout(function(){
-	// 		$window.scrollTop(dtGlobals.winScrollTop + 1);
-	// 		window.bgGlitchFixed = true;
-	// 	},10)
-	// }
+	if (!window.bgGlitchFixed && $.browser.webkit) {
+		setTimeout(function(){
+			$window.scrollTop(dtGlobals.winScrollTop + 1);
+			window.bgGlitchFixed = true;
+		},10)
+	}
 
 	var waitForFinalEvent = (function () {
 		var timers = {};
@@ -20115,12 +20109,12 @@ $window.trigger("dt.removeLoading");
 	}
 
 	// Prevent a backgroung rendering glitch in Webkit.
-	// if (!window.bgGlitchFixed && $.browser.webkit) {
-	// 	setTimeout(function(){
-	// 		$window.scrollTop($window.scrollTop() + 1);
-	// 		window.bgGlitchFixed = true;
-	// 	},10)
-	// }
+	if (!window.bgGlitchFixed && $.browser.webkit) {
+		setTimeout(function(){
+			$window.scrollTop($window.scrollTop() + 1);
+			window.bgGlitchFixed = true;
+		},10)
+	}
 
 	var waitForFinalEvent = (function () {
 		var timers = {};

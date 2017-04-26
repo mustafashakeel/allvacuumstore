@@ -15,8 +15,8 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 	<?php presscore_get_template_part( 'theme', 'header/top-bar' ); ?>
 
 	<header class="header-bar">
-
 		<?php presscore_get_template_part( 'theme', 'header/branding' ); ?>
+       
 
 		<nav class="navigation">
 

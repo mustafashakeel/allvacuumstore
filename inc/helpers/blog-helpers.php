@@ -203,19 +203,11 @@ if ( ! function_exists( 'presscore_blog_ajax_loading_responce' ) ) :
 			require_once PRESSCORE_DIR . '/template-hooks.php';
 			require_once PRESSCORE_EXTENSIONS_DIR . '/dt-pagination.php';
 
-			$post_status = array(
-				'publish',
-			);
-
-			if ( current_user_can( 'read_private_pages' ) ) {
-				$post_status[] = 'private';
-			}
-
 			// get page
 			query_posts( array(
 				'post_type' => 'page',
 				'page_id' => $post_id,
-				'post_status' => $post_status,
+				'post_status' => 'publish',
 				'page' => $target_page
 			) );
 

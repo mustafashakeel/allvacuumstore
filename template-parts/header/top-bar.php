@@ -11,6 +11,7 @@
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 ?>
 		<div <?php presscore_top_bar_class( 'top-bar' ); ?>>
+        
 			<?php presscore_render_header_elements( 'top_bar_left' ); ?>
 			<?php presscore_render_header_elements( 'top_bar_right' ); ?>
 		</div>

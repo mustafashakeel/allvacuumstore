@@ -19,5 +19,5 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 	presscore_display_the_logo( $logo );
 	unset($logo);
 	?>
-
+	<div> teste</div>
 </div>

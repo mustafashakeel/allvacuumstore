@@ -30,7 +30,7 @@ return array(
 		'slug' => 'dt-dummy',
 		'source' => PRESSCORE_PLUGINS_DIR . '/dt-dummy.zip',
 		'required' => false,
-		'version' => '1.2.5',
+		'version' => '1.2.4',
 		'force_activation' => false,
 		'force_deactivation' => false
 	),

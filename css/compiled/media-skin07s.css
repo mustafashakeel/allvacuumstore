@@ -1110,11 +1110,6 @@
   }
   .sidebar-right .content,
   .sidebar-left .content,
-  .article-top-bar > .wf-wrap,
-  .sidebar {
-    padding-right: 20px;
-    padding-left: 20px;
-  }
   .sidebar-right .sidebar,
   .sidebar-left .sidebar,
   .sidebar-divider-off.sidebar-right .sidebar,
@@ -1122,34 +1117,22 @@
   .sidebar-right .sidebar.solid-bg,
   .sidebar-left .sidebar.solid-bg,
   .sidebar-right .sidebar.bg-under-widget,
-  .sidebar-left .sidebar.bg-under-widget {
-    margin-right: 0;
-    margin-left: 0;
+  .sidebar-left .sidebar.bg-under-widget,
+  .article-top-bar > .wf-wrap,
+  .sidebar {
     padding-right: 20px;
     padding-left: 20px;
-  }
-  .sidebar-right .sidebar,
-  .sidebar-divider-off.sidebar-right .sidebar,
-  .sidebar-right .sidebar.solid-bg,
-  .sidebar-right .sidebar.bg-under-widget {
-    padding-left: 0;
-  }
-  .sidebar-left .sidebar,
-  .sidebar-divider-off.sidebar-left .sidebar,
-  .sidebar-left .sidebar.solid-bg,
-  .sidebar-left .sidebar.bg-under-widget {
-    padding-right: 0;
   }
   #main-slideshow.fixed {
     padding: 40px;
   }
   .sidebar-right .content,
   .sidebar-left .sidebar {
-    padding-right: 40px;
+    padding-right: 20px;
   }
   .sidebar-right .sidebar,
   .sidebar-left .content {
-    padding-left: 40px;
+    padding-left: 20px;
   }
   .wf-container,
   .wf-container-main {
@@ -1160,24 +1143,6 @@
   .content,
   .sidebar {
     padding: 0 20px;
-  }
-}
-@media screen and (min-width: 640px) and (max-width: 970px) {
-  .sidebar-right .content,
-  .sidebar-left .content {
-    padding-right: 20px;
-    padding-left: 20px;
-  }
-  .sidebar-right .sidebar,
-  .sidebar-left .sidebar,
-  .sidebar-divider-off.sidebar-right .sidebar,
-  .sidebar-divider-off.sidebar-left .sidebar,
-  .sidebar-right .sidebar.solid-bg,
-  .sidebar-left .sidebar.solid-bg,
-  .sidebar-right .sidebar.bg-under-widget,
-  .sidebar-left .sidebar.bg-under-widget {
-    padding-right: 20px;
-    padding-left: 20px;
   }
 }
 @media screen and (max-width: 640px) {
@@ -1252,10 +1217,10 @@
 @media screen and (max-width: 1200px) {
   .rsHomePorthole .rsPlayBtn,
   .rsHomePorthole .rsCLink {
-    height: 50px;
+    height: 170px;
     margin-left: -25px;
     margin-top: -25px;
-    width: 50px;
+    width: 450px;
   }
   .rsHomePorthole .rsPlayBtnIcon {
     width: 50px;

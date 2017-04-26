@@ -2397,6 +2397,7 @@ vc_map( array(
 
 		array(
 			"type" => "dropdown",
+			"class" => "",
 			"heading" => __("Style", 'the7mk2'),
 			"param_name" => "style",
 			"value" => array(
@@ -2404,7 +2405,7 @@ vc_map( array(
 				"Media with padding & outline" => "2",
 				"Media with padding & background fill" => "3"
 			),
-			"edit_field_class" => "vc_col-xs-12 vc_column dt-force-hidden",
+			"description" => ""
 		),
 		array(
 			"type" => "textfield",
@@ -2412,68 +2413,47 @@ vc_map( array(
 			"heading" => __("Width", 'the7mk2'),
 			"param_name" => "width",
 			"value" => "270",
+			"description" => __("In pixels. Proportional height will be calculated automatically.", 'the7mk2')
+		),
+		array(
+			"type" => "textfield",
+			"class" => "",
+			"heading" => __("Padding", 'the7mk2'),
+			"param_name" => "padding",
+			"value" => "10",
 			"description" => __("In pixels.", 'the7mk2')
 		),
 		array(
 			"type" => "textfield",
 			"class" => "",
-			"heading" => __("Height", 'the7mk2'),
-			"param_name" => "height",
-			"value" => "",
-			"description" => __("In pixels. Will be calculated automatically if empty.", 'the7mk2'),
-			"dependency" => array(
-				"element" => "type",
-				"value" => array(
-					"uploaded_image"
-				),
-			)
-		),
-		array(
-			"type" => "textfield",
-			"heading" => __("Padding", 'the7mk2'),
-			"param_name" => "padding",
-			"value" => "",
-			"description" => __("In pixels.", 'the7mk2'),
-			"dependency" => array(
-				"element" => "style",
-				"value" => array(
-					"2",
-					"3"
-				),
-			),
-			"edit_field_class" => "vc_col-xs-12 vc_column dt-force-hidden",
-		),
-		array(
-			"type" => "textfield",
 			"heading" => __("Margin-top", 'the7mk2'),
 			"param_name" => "margin_top",
-			"value" => "",
-			"description" => __("In pixels.", 'the7mk2'),
-			"edit_field_class" => "vc_col-xs-12 vc_column dt-force-hidden",
+			"value" => "0",
+			"description" => __("In pixels.", 'the7mk2')
 		),
 		array(
 			"type" => "textfield",
+			"class" => "",
 			"heading" => __("Margin-bottom", 'the7mk2'),
 			"param_name" => "margin_bottom",
-			"value" => "",
-			"description" => __("In pixels.", 'the7mk2'),
-			"edit_field_class" => "vc_col-xs-12 vc_column dt-force-hidden",
+			"value" => "0",
+			"description" => __("In pixels.", 'the7mk2')
 		),
 		array(
 			"type" => "textfield",
+			"class" => "",
 			"heading" => __("Margin-left", 'the7mk2'),
 			"param_name" => "margin_left",
-			"value" => "",
-			"description" => __("In pixels.", 'the7mk2'),
-			"edit_field_class" => "vc_col-xs-12 vc_column dt-force-hidden",
+			"value" => "0",
+			"description" => __("In pixels.", 'the7mk2')
 		),
 		array(
 			"type" => "textfield",
+			"class" => "",
 			"heading" => __("Margin-right", 'the7mk2'),
 			"param_name" => "margin_right",
-			"value" => "",
-			"description" => __("In pixels.", 'the7mk2'),
-			"edit_field_class" => "vc_col-xs-12 vc_column dt-force-hidden",
+			"value" => "0",
+			"description" => __("In pixels.", 'the7mk2')
 		),
 		array(
 			"type" => "dropdown",
@@ -2494,13 +2474,7 @@ vc_map( array(
 			"param_name" => "animation",
 			"value" => presscore_get_vc_animation_options(),
 			"description" => ""
-		),
-		array(
-			'type' => 'css_editor',
-			'heading' => __( 'CSS box', 'the7mk2' ),
-			'param_name' => 'css',
-			'group' => __( 'Design Options', 'the7mk2' )
-		),
+		)
 	)
 ) );
 

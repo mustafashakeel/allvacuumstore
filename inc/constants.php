@@ -14,7 +14,7 @@ if ( ! defined( 'PRESSCORE_DB_VERSION' ) ) {
 }
 
 if ( ! defined( 'PRESSCORE_STYLESHEETS_VERSION' ) ) {
-	define( 'PRESSCORE_STYLESHEETS_VERSION', '3.5.1.3' );
+	define( 'PRESSCORE_STYLESHEETS_VERSION', '3.4.2' );
 }
 
 /* Sets the path to the parent theme directory. */

@@ -234,12 +234,6 @@
 							}
 							if($(this).find(".rollover-click-target.go-to").length > 0){
 								window.location.href = $(this).find(".rollover-click-target.go-to").attr('href');
-							}else if($(this).hasClass("woocom-project")){
-								if ( $(e.target).is(".add_to_cart_button") ) {
-									return true
-								}else{
-									window.location.href = $(this).find(" > a").attr('href');
-								}
 							}
 						} else {
 

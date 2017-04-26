@@ -33,12 +33,7 @@
 	max-width: 100%;
 	float: none;
 }
-@media screen and (max-width: 782px) {
-    .attributes-table.wp-list-table,
-    .attributes-table.wp-list-table tbody {
-        display: block;
-    }
-}
+
 /*Customize woocommerce product table responsive*/
 @media only screen and (min-width: 1200px) {
 	table.wp-list-table.posts .column-name {
@@ -71,7 +66,7 @@
         margin-bottom: -1px
     }
 
-    .post-type-product .wp-list-table.posts .is-expanded td:not(.hidden),.post-type-shop_order .wp-list-table.posts .is-expanded td:not(.hidden) {
+    .post-type-product .wp-list-table .is-expanded td:not(.hidden),.post-type-shop_order .wp-list-table .is-expanded td:not(.hidden) {
         overflow: visible
     }
 
@@ -79,48 +74,48 @@
         width: 25px
     }
 
-    .post-type-product .wp-list-table.posts .column-thumb {
+    .post-type-product .wp-list-table .column-thumb {
         display: none;
         text-align: left;
         padding-bottom: 0
     }
 
-    .post-type-product .wp-list-table.posts .column-thumb:before {
+    .post-type-product .wp-list-table .column-thumb:before {
         display: none!important
     }
 
-    .post-type-product .wp-list-table.posts .column-thumb img {
+    .post-type-product .wp-list-table .column-thumb img {
         max-width: 32px
     }
 
-    .post-type-product .wp-list-table.posts .toggle-row {
+    .post-type-product .wp-list-table .toggle-row {
         top: -28px
     }
 
-    .post-type-shop_order .wp-list-table.posts .column-order_status {
+    .post-type-shop_order .wp-list-table .column-order_status {
         display: none;
         text-align: left;
         padding-bottom: 0
     }
 
-    .post-type-shop_order .wp-list-table.posts .column-order_status mark {
+    .post-type-shop_order .wp-list-table .column-order_status mark {
         margin: 0
     }
 
-    .post-type-shop_order .wp-list-table.posts .column-order_status:before {
+    .post-type-shop_order .wp-list-table .column-order_status:before {
         display: none!important
     }
 
-    .post-type-shop_order .wp-list-table.posts .column-customer_message,.post-type-shop_order .wp-list-table.posts .column-order_notes {
+    .post-type-shop_order .wp-list-table .column-customer_message,.post-type-shop_order .wp-list-table .column-order_notes {
         text-align: inherit
     }
 
-    .post-type-shop_order .wp-list-table.posts .column-order_notes .note-on {
+    .post-type-shop_order .wp-list-table .column-order_notes .note-on {
         font-size: 1.3em;
         margin: 0
     }
 
-    .post-type-shop_order .wp-list-table.posts .toggle-row {
+    .post-type-shop_order .wp-list-table .toggle-row {
         top: -15px
     }
 
@@ -205,40 +200,39 @@
         font-size: 14px
     }
     
-    .wp-list-table.posts th.column-primary~th,
-    .wp-list-table.posts tr:not(.inline-edit-row):not(.no-items) td.column-primary~td:not(.check-column):not(.plugin-update) {
+    .wp-list-table th.column-primary~th,.wp-list-table tr:not(.inline-edit-row):not(.no-items) td.column-primary~td:not(.check-column) {
         display: none
     }
     
-    .wp-list-table.posts thead th.column-primary {
+    .wp-list-table thead th.column-primary {
         width: 100%
     }
     
-    .wp-list-table.posts tr th.check-column {
+    .wp-list-table tr th.check-column {
         display: table-cell;
         width: 35px
     }
     
-    .wp-list-table.posts .column-primary .toggle-row {
+    .wp-list-table .column-primary .toggle-row {
         display: block
     }
     
-    .wp-list-table.posts tr:not(.inline-edit-row):not(.no-items):not(.comment) td:not(.check-column):not(.plugin-update) {
+    .wp-list-table tr:not(.inline-edit-row):not(.no-items) td:not(.check-column) {
         position: relative;
         clear: both;
         display: block;
         width: auto!important
     }
     
-    .wp-list-table.posts td.column-primary {
+    .wp-list-table td.column-primary {
         padding-right: 50px
     }
     
-    .wp-list-table.posts tr:not(.inline-edit-row):not(.no-items) td.column-primary~td:not(.check-column):not(.plugin-update) {
+    .wp-list-table tr:not(.inline-edit-row):not(.no-items) td.column-primary~td:not(.check-column) {
         padding: 3px 8px 3px 35%
     }
     
-    .wp-list-table.posts tr:not(.inline-edit-row):not(.no-items):not(.comment) td:not(.column-primary)::before {
+    .wp-list-table tr:not(.inline-edit-row):not(.no-items) td:not(.column-primary)::before {
         position: absolute;
         left: 10px;
         display: block;
@@ -249,7 +243,7 @@
         text-overflow: ellipsis
     }
     
-    .wp-list-table.posts .is-expanded td:not(.hidden) {
+    .wp-list-table .is-expanded td:not(.hidden) {
         display: block!important;
         overflow: hidden
     }

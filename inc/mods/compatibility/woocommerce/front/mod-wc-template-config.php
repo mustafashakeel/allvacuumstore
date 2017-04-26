@@ -63,9 +63,7 @@ if ( ! function_exists( 'dt_woocommerce_configure_template' ) ) :
 			$config->set( 'post_id', $post_id );
 		}
 
-		if ( is_product() ) {
-			add_filter( 'presscore_page_title', 'dt_woocommerce_set_product_title_to_h2_filter' );
-		} else {
+		if ( ! is_product() ) {
 			add_filter( 'presscore_get_page_title', 'dt_woocommerce_get_page_title', 20 );
 		}
 

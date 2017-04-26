@@ -497,7 +497,7 @@ if ( ! function_exists( 'presscore_turn_off_plugins_notifications' ) ) :
 			// Ultimate addons
 			if ( class_exists( 'Ultimate_VC_Addons', false ) ) {
 				$constants = array(
-					'ULTIMATE_USE_BUILTIN' => true,
+					'ULTIMATE_USE_BUILTIN' => false,
 					'ULTIMATE_NO_UPDATE_CHECK' => true,
 					'ULTIMATE_NO_EDIT_PAGE_NOTICE' => true,
 					'ULTIMATE_NO_PLUGIN_PAGE_NOTICE' => true,

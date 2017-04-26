@@ -45,18 +45,10 @@ abstract class Presscore_Ajax_Content_Builder {
 	abstract protected function configure_template();
 
 	protected function do_page_query() {
-		$post_status = array(
-			'publish',
-		);
-
-		if ( current_user_can( 'read_private_pages' ) ) {
-			$post_status[] = 'private';
-		}
-
 		query_posts( array(
 			'post_type' => 'page',
 			'page_id' => $this->input['post_id'],
-			'post_status' => $post_status,
+			'post_status' => 'publish',
 			'page' => $this->input['target_page']
 		) );
 	}

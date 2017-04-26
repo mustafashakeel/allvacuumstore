@@ -237,11 +237,10 @@ if ( ! function_exists( 'presscore_enqueue_dynamic_stylesheets' ) ) :
 	/**
 	 * Enqueue *.less files
 	 */
-	function presscore_enqueue_dynamic_stylesheets() {
+	function presscore_enqueue_dynamic_stylesheets(){
 
 		$dynamic_stylesheets = presscore_get_dynamic_stylesheets_list();
 		$preset = of_get_option( 'preset', presscore_set_first_run_skin() );
-		$force_regen = presscore_force_regenerate_css();
 
 		foreach ( $dynamic_stylesheets as $stylesheet_handle=>$stylesheet ) {
 
@@ -254,10 +253,9 @@ if ( ! function_exists( 'presscore_enqueue_dynamic_stylesheets' ) ) :
 			if (
 				( defined('DT_ALWAYS_REGENERATE_DYNAMIC_CSS') && DT_ALWAYS_REGENERATE_DYNAMIC_CSS ) 
 				|| 
-				( $force_regen )
-				||
 				( ( ! $fallback_path || ! file_exists( $fallback_path ) ) && !$stylesheet_cache )
 			) {
+
 				try {
 					presscore_generate_less_css_file( $stylesheet_handle, $stylesheet['src'] );
 				} catch ( Exception $e ) {
@@ -274,9 +272,6 @@ if ( ! function_exists( 'presscore_enqueue_dynamic_stylesheets' ) ) :
 
 		do_action( 'presscore_enqueue_dynamic_stylesheets' );
 
-		if ( $force_regen ) {
-			presscore_set_force_regenerate_css( false );
-		}
 	}
 
 endif;
@@ -397,7 +392,7 @@ if ( ! function_exists( 'presscore_cache_loader_inline_css' ) ) :
 	 * @return string
 	 */
 	function presscore_cache_loader_inline_css( $css ) {
-		update_option( 'the7_beautiful_loader_inline_css', $css );
+		update_option( 'the7_beautiful_loader_inline_css', $css, false );
 		return $css;
 	}
 
@@ -427,33 +422,6 @@ if ( ! function_exists( 'presscore_get_loader_inline_css' ) ) :
 		}
 
 		return apply_filters( 'presscore_get_loader_inline_css', $css );
-	}
-
-endif;
-
-if ( ! function_exists( 'presscore_force_regenerate_css' ) ) :
-
-	/**
-	 * Get regenerate css from less flag.
-	 * 
-	 * @return boolean
-	 */
-	function presscore_force_regenerate_css() {
-		return get_option( 'the7_force_regen_css' );
-	}
-
-endif;
-
-if ( ! function_exists( 'presscore_set_force_regenerate_css' ) ) :
-
-	/**
-	 * Set force regenerate css from less flag.
-	 * 
-	 * @param  boolean $force
-	 * @return boolean
-	 */
-	function presscore_set_force_regenerate_css( $force = false ) {
-		return update_option( 'the7_force_regen_css', $force );
 	}
 
 endif;

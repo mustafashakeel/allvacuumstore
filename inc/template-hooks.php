@@ -739,14 +739,13 @@ if ( ! function_exists( 'presscore_fancy_header_controller' ) ) :
 				$title_class .= ' color-accent';
 			}
 
-			$title_style = '';
+			$title .= sprintf( '<h1 class="fancy-title entry-title %s"', $title_class );
+
 			if ( 'color' == $config->get('fancy_header.title.color.mode') ) {
-				$title_style = ' style="color: ' . esc_attr( $config->get('fancy_header.title.color') ) . '"';
+				$title .= ' style="color: ' . esc_attr( $config->get('fancy_header.title.color') ) . '"';
 			}
 
-			$custom_title = '<h1 class="fancy-title entry-title ' . $title_class . '"' . $title_style . '><span>' . strip_tags( $custom_title ) . '</span></h1>';
-
-			$title .= apply_filters( 'presscore_page_title', $custom_title );
+			$title .= '><span>' . strip_tags( $custom_title ) . '</span></h1>';
 
 		}
 

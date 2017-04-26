@@ -698,19 +698,3 @@ if ( ! function_exists( 'dt_woocommerce_remove_masonry_container_filters' ) ) :
 	}
 
 endif;
-
-if ( ! function_exists( 'dt_woocommerce_set_product_title_to_h2_filter' ) ) :
-
-	/**
-	 * Wrap product title with h2 tag.
-	 *
-	 * There is h1 title on product page so we need to replace it with h2 here.
-	 *
-	 * @param  string $title
-	 * @return string
-	 */
-	function dt_woocommerce_set_product_title_to_h2_filter( $title ) {
-		return str_replace( array( '<h1', '</h1' ), array( '<h2', '</h2' ), $title );
-	}
-
-endif;

@@ -9,6 +9,7 @@
 // File Security Check
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
+
 do_action( 'presscore_before_primary_menu' );
 
 echo '<ul class="' . implode( ' ', presscore_get_primary_menu_class( 'main-nav' ) ) . '" role="menu">';

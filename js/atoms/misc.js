@@ -777,12 +777,12 @@ $window.trigger("dt.removeLoading");
 	};
 
 	// Prevent a backgroung rendering glitch in Webkit.
-	// if (!window.bgGlitchFixed && $.browser.webkit) {
-	// 	setTimeout(function(){
-	// 		$window.scrollTop(dtGlobals.winScrollTop + 1);
-	// 		window.bgGlitchFixed = true;
-	// 	},10)
-	// }
+	if (!window.bgGlitchFixed && $.browser.webkit) {
+		setTimeout(function(){
+			$window.scrollTop(dtGlobals.winScrollTop + 1);
+			window.bgGlitchFixed = true;
+		},10)
+	}
 
 	var waitForFinalEvent = (function () {
 		var timers = {};

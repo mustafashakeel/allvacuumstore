@@ -202,7 +202,7 @@ if ( ! function_exists( 'presscore_render_header_elements' ) ) :
 
 			// wrap open
 			echo '<div class="' . implode( ' ', presscore_sanitize_classes( $classes ) ) . '">';
-
+			
 			// render elements
 			foreach ( $field_elements as $element ) {
 
@@ -259,10 +259,9 @@ if ( ! function_exists( 'presscore_render_header_elements' ) ) :
 						presscore_top_bar_contact_element('info');
 						break;
 				}
-
+								
 				do_action( "presscore_render_header_element-{$element}" );
 			}
-
 			// wrap clos
 			echo '</div>';
 		}

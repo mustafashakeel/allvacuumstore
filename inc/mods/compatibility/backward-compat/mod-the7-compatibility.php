@@ -53,6 +53,7 @@ if ( ! class_exists( 'Presscore_Modules_Compatibility_oldThe7', false ) ) :
 
 			if ( version_compare( $db_version, PRESSCORE_DB_VERSION ) < 0 ) {
 				$this->patch_db( $db_version );
+				self::clear_stylesheets_cache();
 
 				// Clean options cache.
 				delete_transient( 'optionsframework_clean_options' );
@@ -63,7 +64,7 @@ if ( ! class_exists( 'Presscore_Modules_Compatibility_oldThe7', false ) ) :
 
 		public function upgrade_stylesheets_action() {
 			if ( version_compare( get_option( 'the7_style_version' ), PRESSCORE_STYLESHEETS_VERSION ) < 0 ) {
-				self::regenerate_stylesheets();
+				self::clear_stylesheets_cache();
 
 				update_option( 'the7_style_version', PRESSCORE_STYLESHEETS_VERSION );
 			}
@@ -728,9 +729,6 @@ if ( ! class_exists( 'Presscore_Modules_Compatibility_oldThe7', false ) ) :
 			// Sidebar.
 			$the72_options['sidebar-bg_opacity'] = '100';
 
-			// Disable plugins notifications.
-			$the72_options['general-hide_plugins_notifications'] = '1';
-
 			$merged_options = array_merge( $preset_options, $the72_options );
 
 			// Validate options.
@@ -790,9 +788,9 @@ if ( ! class_exists( 'Presscore_Modules_Compatibility_oldThe7', false ) ) :
 			return str_replace( $theme_root, get_theme_root_uri(), $current_dir );
 		}
 
-		public static function regenerate_stylesheets() {
-			presscore_set_force_regenerate_css( true );
-			presscore_cache_loader_inline_css( '' );
+		public static function clear_stylesheets_cache() {
+			global $wpdb;
+			$wpdb->query( "DELETE FROM {$wpdb->options} WHERE option_name LIKE '%wp_less_compiled_%' OR option_name LIKE '%wp_less_stylesheet_data_%'" );
 		}
 
 		protected static function fix_header_elements_option( $header, $values ) {
